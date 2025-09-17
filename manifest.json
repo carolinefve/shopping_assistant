@@ -1,0 +1,38 @@
+{
+  "name": "Shopping Assistant",
+  "description": "AI-powered shopping assistant with virtual try-on, digital closet and budget tracking",
+  "version": "1.0.0",
+  "manifest_version": 3,
+
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "notifications"],
+
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles/index.css"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {}
+  },
+
+  "options_page": "options/options.html",
+  "closet_page": "closet/closet.html",
+
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/images/*", "closet/closet.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
