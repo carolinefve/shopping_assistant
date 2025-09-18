@@ -7,8 +7,33 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Popup</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+</body>
   </head>
   <body>
-    <h1>Popup</h1>
+      <div class="container">
+         <div class="header">
+             <div class="logo-container">
+                 <img src="../images/logo.png" alt="Smart Closet Logo" class="popup-logo-img">
+             </div>
+
+             <button class="menu-button">
+                 <img src="../images/menu.png" alt="Menu Icon" class="menu-img">
+             </button>
+         </div>
+ 
+         <div class="image-display-area">
+             <div class="image-placeholder personal-image-placeholder" id="personal-image-placeholder">
+                 <span>Add Your Image</span>
+             </div>
+              <input type="file" id="image-upload" accept="image/*" style="display: none;">
+         </div>
+ 
+         <div class="action-buttons">
+             <button class="button save-button" id="save-to-closet">Save to Closet</button>
+             <button class="button closet-button" id="open-closet">Open Closet</button>
+         </div>
+     </div>
   </body>
 </html>

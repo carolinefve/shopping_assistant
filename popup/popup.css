@@ -1,0 +1,131 @@
+:root {
+  --background-colour: #e7d1ff;
+  --border: var(--background-colour) solid 0.06rem;
+  --border-radius: 0.5rem;
+  --button-background: #2a4aa1;
+  --button-hover-background: #2a4aa1ec;
+  --second-button-background: #935cce;
+  --second-button-hover-background: #935cceef;
+  --button-text: #f8f8ff;
+  --text-colour: #f8f8ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.container {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.3rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.popup-logo-img {
+  width: 8rem;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  transform: scale(1.05);
+}
+
+.menu-img {
+  width: 2rem;
+}
+
+.image-display-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 18rem;
+  background-color: #e9ecef;
+  border-radius: 0.5rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+  font-style: italic;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.button {
+  flex-grow: 1;
+  padding: 0.6rem 0.9rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.save-button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+}
+
+.save-button:hover {
+  transform: scale(1.05);
+}
+
+.closet-button {
+  background-color: var(--second-button-background);
+  color: var(--button-text);
+}
+
+.closet-button:hover {
+  transform: scale(1.05);
+}
