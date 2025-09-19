@@ -33,7 +33,6 @@
   },
 
   "options_page": "options/options.html",
-  "closet_page": "closet/closet.html",
 
   "web_accessible_resources": [
     {
