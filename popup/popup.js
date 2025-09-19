@@ -45,3 +45,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Open closet tab
+
+document.getElementById("open-closet").addEventListener("click", () => {
+  chrome.tabs.create({
+    url: "closet/closet.html",
+  });
+});
+
+// Show options view
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mainPopupView = document.getElementById("main-view");
+  const optionsView = document.getElementById("options-view");
+  const menuButton = document.querySelector(".menu-button");
+  const backButton = document.querySelector(".back-button");
+
+  // Switch to the options view
+  menuButton.addEventListener("click", () => {
+    mainPopupView.style.display = "none";
+    optionsView.style.display = "block";
+  });
+
+  // Switch to the main popup view
+  backButton.addEventListener("click", () => {
+    optionsView.style.display = "none";
+    mainPopupView.style.display = "block";
+  });
+});
